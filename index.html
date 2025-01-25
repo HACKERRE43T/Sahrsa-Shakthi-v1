@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharingan Madara Uchiha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General styling */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Verdana', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px;
+            color: #ddd;
+        }
+
+        /* Sharingan styling */
+        .sharingan {
+            position: relative;
+            margin: 20px auto 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid #ff0000;
+            box-shadow: 0 0 15px #ff0000;
+            animation: rotate 5s infinite linear;
+        }
+
+        .sharingan div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .tomoe1 {
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tomoe2 {
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tomoe3 {
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Smooth rotation animation */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Styling for the search bar and its theme */
+        .search-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid #ff0000;
+            border-radius: 25px;
+            background-color: black;
+            color: #ff0000;
+            text-align: center;
+            font-family: 'Verdana', sans-serif;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ff0000;
+            color: white;
+            cursor: pointer;
+            font-family: 'Verdana', sans-serif;
+            margin-left: 10px;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .search-container button:hover {
+            background-color: #cc0000;
+        }
+
+        /* Styling for "Our Models" section */
+        .our-models {
+            margin: 50px 20px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .our-models h2 {
+            font-size: 2em;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        .our-models p {
+            font-size: 1em;
+            color: #ccc;
+            line-height: 1.5em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sharingan animation at the top -->
+    <div class="sharingan">
+        <div class="tomoe1"></div>
+        <div class="tomoe2"></div>
+        <div class="tomoe3"></div>
+    </div>
+
+    <h1>Sahasra-shakti</h1>
+    <p>
+        Welcome to <strong>Sahasra-shakti</strong>, a revolutionary concept in AI innovation. 
+        Inspired by the power of A.I, this project envisions a future where 
+        every profession is empowered by its own AI system. From lawyers to doctors, each AI is tailored to 
+        meet the unique demands of the field, providing unparalleled efficiency and precision.
+    </p>
+
+    <!-- Uchiha-themed search bar -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter 'lawyer' or 'doctor'">
+        <button onclick="redirectUser()">Search</button>
+    </div>
+
+    <!-- Our Models Section -->
+    <div class="our-models">
+        <h2>Our Models</h2>
+        <p><strong>Niyamashakthi:</strong> This AI serves as a digital bridge between clients and lawyers. 
+        It acts as an intelligent layer that simplifies legal processes, ensuring seamless communication 
+        and efficient case management.</p>
+        <p><strong>Pranashakthi:</strong> A digital AI doctor that bridges the gap between patients and doctors. 
+        It provides reliable medical insights, streamlining healthcare interactions for better diagnosis and treatment.</p>
+        <h3>Developed By Right Solution</h3>
+        <p>We are updating new models daybyday but at this moment we have only two models.</p>
+        <h3>Disclaimer</h3>
+    <p>
+        The information and services provided by <strong>Sahasra-shakti</strong> are intended for informational purposes only 
+        and do not constitute legal, medical, or professional advice. The AI models, including <strong>Niyamashakthi</strong> and <strong>Pranashakthi</strong>, 
+        are designed to assist users in bridging gaps within legal and medical domains but are not substitutes for licensed 
+        professionals. Users are encouraged to consult qualified experts for accurate and personalized assistance. 
+        <strong>Sahasra-shakti</strong> assumes no liability for decisions made based on the AI's outputs.
+    </p>
+
+    </div>
+
+    <script>
+        // Redirect user based on input
+        function redirectUser() {
+            const userInput = document.getElementById('search-input').value.toLowerCase();
+            if (userInput === 'lawyer') {
+                window.location.href = 'https://niyamashakthiai.vercel.app';
+            } else if (userInput === 'doctor') {
+                window.location.href = 'https://pranashakthi.vercel.app';
+            } else {
+                alert('Please enter either "lawyer" or "doctor".');
+            }
+        }
+    </script>
+</body>
+</html>
